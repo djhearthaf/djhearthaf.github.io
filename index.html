@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九一拔罗卜 - 原创视频厂牌,记录每一种生长的力量</title>
+<meta name="description" content="九一拔罗卜是一家专注原创内容与纪实影像的视频品牌，用镜头记录真实生活、社区创作与成长故事。">
+<style>
+:root{
+  --root-bg:#0d0f14;
+  --root-panel:#151922;
+  --root-panel2:#1c2130;
+  --root-line:#2a3142;
+  --root-text:#e8ebf2;
+  --root-sub:#9aa4b8;
+  --root-accent:#ff9b3d;
+  --root-accent2:#5fd6a6;
+  --root-red:#ff5c5c;
+  --root-radius:18px;
+  --root-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--root-bg);
+  color:var(--root-text);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+ul{list-style:none;}
+::selection{background:var(--root-accent);color:#0d0f14;}
+
+/* ===== 顶部导航 ===== */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  backdrop-filter:blur(14px);
+  background:rgba(13,15,20,.72);
+  border-bottom:1px solid rgba(42,49,66,.6);
+  transition:background .3s ease;
+}
+.nav-wrap{
+  max-width:1240px;margin:0 auto;padding:16px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;
+  background:linear-gradient(135deg,var(--root-accent),#ff5c5c);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#0d0f14;font-size:18px;
+  box-shadow:0 8px 20px rgba(255,155,61,.35);
+  flex:none;
+}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;}
+.brand-name small{display:block;font-size:11px;font-weight:400;color:var(--root-sub);letter-spacing:2px;margin-top:-2px;}
+.nav-links{display:flex;gap:8px;align-items:center;}
+.nav-links a{
+  padding:8px 14px;border-radius:10px;font-size:14px;color:var(--root-sub);
+  transition:all .25s ease;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--root-text);background:var(--root-panel2);}
+.nav-cta{
+  padding:10px 20px;border-radius:11px;font-size:14px;font-weight:700;
+  background:linear-gradient(135deg,var(--root-accent),#ff7a3d);
+  color:#0d0f14;white-space:nowrap;
+  box-shadow:0 8px 22px rgba(255,155,61,.3);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,155,61,.45);}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--root-text);border-radius:2px;transition:all .3s ease;}
+
+/* ===== 主体容器 ===== */
+main{max-width:1240px;margin:0 auto;padding:0 28px;}
+section{padding:88px 0;position:relative;}
+
+/* ===== Hero ===== */
+.hero{
+  padding-top:150px;padding-bottom:70px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:7px 16px;border-radius:999px;
+  border:1px solid var(--root-line);
+  background:var(--root-panel);
+  font-size:12.5px;letter-spacing:2px;color:var(--root-accent2);
+  margin-bottom:26px;
+}
+.hero-eyebrow::before{
+  content:"";width:7px;height:7px;border-radius:50%;
+  background:var(--root-accent2);box-shadow:0 0 0 4px rgba(95,214,166,.15);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+.hero h1{
+  font-size:clamp(46px,6.2vw,76px);
+  line-height:1.08;font-weight:900;letter-spacing:-1px;
+  margin-bottom:24px;
+}
+.hero h1 .hl{
+  background:linear-gradient(120deg,var(--root-accent),#ff5c5c,var(--root-accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{
+  font-size:17px;color:var(--root-sub);max-width:520px;margin-bottom:34px;line-height:1.85;
+}
+.hero-lead strong{color:var(--root-text);font-weight:600;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.btn-primary{
+  padding:14px 30px;border-radius:13px;font-size:15px;font-weight:700;
+  background:linear-gradient(135deg,var(--root-accent),#ff7a3d);
+  color:#0d0f14;display:inline-flex;align-items:center;gap:9px;
+  box-shadow:0 14px 34px rgba(255,155,61,.32);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(255,155,61,.48);}
+.btn-ghost{
+  padding:14px 26px;border-radius:13px;font-size:15px;font-weight:600;
+  border:1px solid var(--root-line);color:var(--root-text);
+  display:inline-flex;align-items:center;gap:9px;
+  transition:all .22s ease;
+}
+.btn-ghost:hover{background:var(--root-panel2);border-color:#3a4358;}
+.hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap;}
+.hero-stat b{display:block;font-size:30px;font-weight:900;letter-spacing:-.5px;}
+.hero-stat b em{font-style:normal;font-size:15px;color:var(--root-accent);margin-left:3px;}
+.hero-stat span{font-size:13px;color:var(--root-sub);}
+
+/* ===== 播放器视觉 ===== */
+.player-card{
+  position:relative;border-radius:22px;overflow:hidden;
+  background:var(--root-panel);border:1px solid var(--root-line);
+  box-shadow:var(--root-shadow);
+  aspect-ratio:16/11;
+}
+.player-visual{position:absolute;inset:0;}
+.player-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(42,49,66,.55) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(42,49,66,.55) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(circle at 50% 45%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(circle at 50% 45%,#000 20%,transparent 78%);
+}
+.player-orb{
+  position:absolute;border-radius:50%;filter:blur(38px);opacity:.55;
+  animation:float 9s ease-in-out infinite;
+}
+.orb-a{width:220px;height:220px;background:var(--root-accent);top:-30px;left:-20px;}
+.orb-b{width:180px;height:180px;background:var(--root-accent2);bottom:-20px;right:10px;animation-delay:-3s;}
+.orb-c{width:150px;height:150px;background:#6b7cff;top:40%;left:45%;animation-delay:-6s;}
+@keyframes float{
+  0%,100%{transform:translate(0,0) scale(1);}
+  50%{transform:translate(18px,-24px) scale(1.12);}
+}
+.player-frame{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+}
+.play-btn{
+  width:82px;height:82px;border-radius:50%;
+  background:rgba(13,15,20,.55);border:1.5px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .25s ease;
+}
+.play-btn:hover{transform:scale(1.08);background:rgba(255,155,61,.85);border-color:transparent;}
+.play-btn svg{width:26px;height:26px;fill:#fff;margin-left:4px;}
+.player-badge{
+  position:absolute;top:18px;left:18px;
+  display:flex;align-items:center;gap:8px;
+  padding:6px 13px;border-radius:8px;font-size:12px;
+  background:rgba(13,15,20,.7);border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(6px);
+}
+.player-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--root-red);animation:pulse 1.6s infinite;}
+.player-meta{
+  position:absolute;left:18px;right:18px;bottom:18px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
+}
+.player-meta h3{font-size:15px;font-weight:700;}
+.player-meta p{font-size:12px;color:var(--root-sub);}
+.player-time{
+  font-size:12px;font-family:ui-monospace,monospace;color:var(--root-sub);
+  padding:4px 10px;border-radius:7px;background:rgba(13,15,20,.65);
+}
+.progress-line{
+  position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.1);
+}
+.progress-fill{height:100%;width:38%;background:linear-gradient(90deg,var(--root-accent),var(--root-red));}
+
+/* ===== 滚动文字带 ===== */
+.ticker{
+  border-top:1px solid var(--root-line);border-bottom:1px solid var(--root-line);
+  background:var(--root-panel);
+  overflow:hidden;padding:16px 0;
+}
+.ticker-track{
+  display:flex;gap:44px;white-space:nowrap;
+  animation:scrollx 26s linear infinite;
+  width:max-content;
+}
+.ticker-track span{
+  font-size:14px;letter-spacing:3px;color:var(--root-sub);
+  display:flex;align-items:center;gap:44px;
+}
+.ticker-track span::after{content:"◆";color:var(--root-accent);font-size:10px;}
+@keyframes scrollx{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ===== 通用章节标题 ===== */
+.sec-head{margin-bottom:52px;max-width:720px;}
+.sec-tag{
+  font-size:12.5px;letter-spacing:3px;color:var(--root-accent);
+  font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.sec-tag::before{content:"";width:26px;height:2px;background:var(--root-accent);border-radius:2px;}
+.sec-head h2{
+  font-size:clamp(28px,3.8vw,42px);font-weight:900;letter-spacing:-.5px;line-height:1.25;
+  margin-bottom:14px;
+}
+.sec-head p{color:var(--root-sub);font-size:15.5px;line-height:1.85;}
+
+/* ===== 内容矩阵 ===== */
+.matrix-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.matrix-card{
+  background:var(--root-panel);border:1px solid var(--root-line);
+  border-radius:var(--root-radius);padding:30px 26px;
+  transition:transform .28s ease,border-color .28s ease,background .28s ease;
+  position:relative;overflow:hidden;
+}
+.matrix-card::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(circle at 100% 0%,rgba(255,155,61,.12),transparent 55%);
+  opacity:0;transition:opacity .3s ease;pointer-events:none;
+}
+.matrix-card:hover{transform:translateY(-6px);border-color:#3a4358;background:var(--root-panel2);}
+.matrix-card:hover::after{opacity:1;}
+.matrix-icon{
+  width:50px;height:50px;border-radius:14px;
+  background:rgba(255,155,61,.12);border:1px solid rgba(255,155,61,.28);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  color:var(--root-accent);
+}
+.matrix-icon svg{width:24px;height:24px;}
+.matrix-card h3{font-size:18.5px;font-weight:800;margin-bottom:10px;}
+.matrix-card p{font-size:14.2px;color:var(--root-sub);line-height:1.8;}
+.matrix-card .tag-row{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  font-size:11.5px;padding:4px 11px;border-radius:999px;
+  background:rgba(95,214,166,.1);color:var(--root-accent2);
+  border:1px solid rgba(95,214,166,.22);
+}
+
+/* ===== 精选作品 ===== */
+.show-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.show-card{
+  border-radius:var(--root-radius);overflow:hidden;border:1px solid var(--root-line);
+  background:var(--root-panel);transition:transform .28s ease,border-color .28s ease;
+  position:relative;
+}
+.show-card:hover{transform:translateY(-5px);border-color:#3a4358;}
+.show-thumb{
+  aspect-ratio:16/9;position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.show-thumb .tn-bg{position:absolute;inset:0;}
+.show-thumb .tn-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(13,15,20,.85));
+}
+.tn-1 .tn-bg{background:
+  radial-gradient(circle at 25% 30%,rgba(255,155,61,.55),transparent 45%),
+  radial-gradient(circle at 75% 70%,rgba(255,92,92,.5),transparent 50%),
+  #1a2030;}
+.tn-2 .tn-bg{background:
+  radial-gradient(circle at 70% 25%,rgba(95,214,166,.5),transparent 48%),
+  radial-gradient(circle at 30% 80%,rgba(107,124,255,.5),transparent 50%),
+  #1a2030;}
+.tn-3 .tn-bg{background:
+  radial-gradient(circle at 30% 70%,rgba(107,124,255,.55),transparent 48%),
+  radial-gradient(circle at 80% 20%,rgba(255,155,61,.5),transparent 50%),
+  #1a2030;}
+.tn-4 .tn-bg{background:
+  radial-gradient(circle at 50% 40%,rgba(255,92,92,.5),transparent 46%),
+  radial-gradient(circle at 20% 90%,rgba(95,214,166,.5),transparent 48%),
+  #1a2030;}
+.show-thumb .dur{
+  position:absolute;top:14px;right:14px;font-size:11.5px;font-family:ui-monospace,monospace;
+  padding:3px 9px;border-radius:7px;background:rgba(13,15,20,.72);
+  border:1px solid rgba(255,255,255,.12);
+}
+.show-thumb .ep{
+  position:absolute;top:14px;left:14px;font-size:11.5px;padding:3px 10px;border-radius:7px;
+  background:rgba(255,155,61,.9);color:#0d0f14;font-weight:700;
+}
+.show-thumb .play-mini{
+  position:relative;z-index:2;width:56px;height:56px;border-radius:50%;
+  background:rgba(13,15,20,.55);border:1.5px solid rgba(255,255,255,.3);
+  backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;
+  transition:all .25s ease;
+}
+.show-card:hover .play-mini{transform:scale(1.12);background:rgba(255,155,61,.9);border-color:transparent;}
+.play-mini svg{width:18px;height:18px;fill:#fff;margin-left:3px;}
+.show-body{padding:22px 24px 24px;}
+.show-body h3{font-size:18px;font-weight:800;margin-bottom:8px;}
+.show-body p{font-size:13.8px;color:var(--root-sub);line-height:1.8;}
+.show-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--root-line);
+  font-size:12.5px;color:var(--root-sub);
+}
+.show-foot .views{display:flex;align-items:center;gap:6px;}
+.show-foot .views svg{width:14px;height:14px;fill:var(--root-sub);}
+
+/* ===== 成长时间线 ===== */
+.timeline{position:relative;padding-left:0;}
+.timeline::before{
+  content:"";position:absolute;left:23px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--root-accent),var(--root-accent2),transparent);
+}
+.tl-item{
+  position:relative;padding-left:70px;padding-bottom:44px;
+}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{
+  position:absolute;left:9px;top:2px;width:30px;height:30px;border-radius:50%;
+  background:var(--root-panel);border:2px solid var(--root-accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;color:var(--root-accent);z-index:2;
+  box-shadow:0 0 0 6px var(--root-bg);
+}
+.tl-item:nth-child(even) .tl-dot{border-color:var(--root-accent2);color:var(--root-accent2);}
+.tl-item h3{font-size:19px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.tl-item h3 .yr{
+  font-size:12px;font-weight:600;color:var(--root-sub);
+  padding:2px 10px;border-radius:7px;background:var(--root-panel2);border:1px solid var(--root-line);
+}
+.tl-item p{font-size:14.5px;color:var(--root-sub);line-height:1.85;max-width:680px;}
+
+/* ===== 数据面板 ===== */
+.stat-band{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+  background:var(--root-panel);border:1px solid var(--root-line);
+  border-radius:22px;padding:40px 32px;
+}
+.stat-cell{text-align:center;position:relative;}
+.stat-cell:not(:last-child)::after{
+  content:"";position:absolute;right:-11px;top:12%;bottom:12%;width:1px;
+  background:var(--root-line);
+}
+.stat-cell b{
+  display:block;font-size:36px;font-weight:900;letter-spacing:-1px;
+  background:linear-gradient(120deg,var(--root-accent),var(--root-accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  line-height:1.2;
+}
+.stat-cell span{font-size:13px;color:var(--root-sub);letter-spacing:.5px;}
+
+/* ===== 创作团队 ===== */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.team-card{
+  background:var(--root-panel);border:1px solid var(--root-line);
+  border-radius:var(--root-radius);padding:26px 22px;text-align:center;
+  transition:transform .28s ease,border-color .28s ease;
+}
+.team-card:hover{transform:translateY(-6px);border-color:#3a4358;}
+.avatar{
+  width:76px;height:76px;border-radius:50%;margin:0 auto 16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:900;color:#0d0f14;
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+}
+.av-1{background:linear-gradient(135deg,#ff9b3d,#ff5c5c);}
+.av-2{background:linear-gradient(135deg,#5fd6a6,#3aa8c9);}
+.av-3{background:linear-gradient(135deg,#6b7cff,#a86bff);}
+.av-4{background:linear-gradient(135deg,#ffd35c,#ff9b3d);}
+.team-card h3{font-size:16.5px;font-weight:800;margin-bottom:4px;}
+.team-card .role{font-size:12.5px;color:var(--root-accent);margin-bottom:12px;letter-spacing:.5px;}
+.team-card p{font-size:13px;color:var(--root-sub);line-height:1.75;}
+
+/* ===== 社区 / 留言 ===== */
+.community-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start;}
+.msg-board{
+  background:var(--root-panel);border:1px solid var(--root-line);
+  border-radius:var(--root-radius);padding:28px;
+}
+.msg-board h3{font-size:18px;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.msg-board h3 .live{font-size:11px;font-weight:600;color:var(--root-red);padding:2px 9px;border-radius:6px;background:rgba(255,92,92,.12);border:1px solid rgba(255,92,92,.3);}
+.msg-item{
+  display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--root-line);
+}
+.msg-item:last-of-type{border-bottom:none;}
+.msg-av{
+  width:38px;height:38px;border-radius:11px;flex:none;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#0d0f14;
+}
+.msg-body b{font-size:13.5px;font-weight:700;}
+.msg-body b span{font-weight:400;color:var(--root-sub);font-size:11.5px;margin-left:8px;}
+.msg-body p{font-size:13.5px;color:var(--root-sub);line-height:1.7;margin-top:3px;}
+.msg-form{margin-top:20px;display:flex;flex-direction:column;gap:12px;}
+.msg-form textarea,.msg-form input{
+  width:100%;background:var(--root-panel2);border:1px solid var(--root-line);
+  border-radius:11px;padding:12px 14px;color:var(--root-text);
+  font-family:inherit;font-size:14px;resize:vertical;transition:border-color .2s ease;
+}
+.msg-form textarea{min-height:84px;}
+.msg-form textarea:focus,.msg-form input:focus{outline:none;border-color:var(--root-accent);}
+.msg-form button{
+  align-self:flex-start;padding:11px 26px;border-radius:11px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--root-accent),#ff7a3d);color:#0d0f14;
+  font-weight:700;font-size:14px;font-family:inherit;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.msg-form button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,155,61,.4);}
+
+/* ===== 订阅卡 ===== */
+.subscribe-card{
+  background:linear-gradient(150deg,var(--root-panel2),#131722);
+  border:1px solid var(--root-line);border-radius:22px;padding:38px 32px;
+  position:relative;overflow:hidden;
+}
+.subscribe-card::before{
+  content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,155,61,.28),transparent 70%);
+  top:-90px;right:-70px;
+}
+.subscribe-card h3{font-size:22px;font-weight:900;margin-bottom:10px;position:relative;}
+.subscribe-card p{font-size:14px;color:var(--root-sub);line-height:1.8;margin-bottom:24px;position:relative;}
+.sub-input-row{display:flex;gap:10px;position:relative;flex-wrap:wrap;}
+.sub-input-row input{
+  flex:1;min-width:170px;background:rgba(13,15,20,.6);border:1px solid var(--root-line);
+  border-radius:11px;padding:13px 16px;color:var(--root-text);font-family:inherit;font-size:14px;
+}
+.sub-input-row input:focus{outline:none;border-color:var(--root-accent);}
+.sub-input-row button{
+  padding:13px 26px;border-radius:11px;border:none;cursor:pointer;font-weight:700;font-size:14px;
+  background:var(--root-accent2);color:#0d0f14;font-family:inherit;
+  transition:transform .2s ease,filter .2s ease;
+}
+.sub-input-row button:hover{transform:translateY(-2px);filter:brightness(1.08);}
+.sub-msg{font-size:13px;color:var(--root-accent2);margin-top:12px;height:18px;position:relative;}
+.sub-note{font-size:11.5px;color:var(--root-sub);margin-top:14px;position:relative;}
+
+/* ===== 页脚 ===== */
+.site-footer{
+  border-top:1px solid var(--root-line);margin-top:40px;
+  background:linear-gradient(180deg,transparent,rgba(21,25,34,.65));
+}
+.footer-wrap{max-width:1240px;margin:0 auto;padding:62px 28px 34px;}
+.footer-top{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;
+}
+.footer-brand .brand{margin-bottom:16px;}
+.footer-brand p{font-size:13.5px;color:var(--root-sub);line-height:1.9;max-width:300px;}
+.footer-col h4{font-size:14px;font-weight:800;margin-bottom:16px;letter-spacing:.5px;}
+.footer-col a{
+  display:block;font-size:13.5px;color:var(--root-sub);padding:5px 0;
+  transition:color .2s ease,transform .2s ease;
+}
+.footer-col a:hover{color:var(--root-accent);transform:translateX(3px);}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding-top:26px;border-top:1px solid var(--root-line);
+  font-size:12.5px;color:var(--root-sub);
+}
+.footer-bottom .socials{display:flex;gap:12px;}
+.footer-bottom .socials a{
+  width:34px;height:34px;border-radius:10px;border:1px solid var(--root-line);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .22s ease;
+}
+.footer-bottom .socials a:hover{background:var(--root-panel2);border-color:#3a4358;transform:translateY(-2px);}
+.footer-bottom .socials svg{width:16px;height:16px;fill:var(--root-sub);}
+
+/* ===== 响应式 ===== */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:130px;}
+  .player-card{max-width:600px;}
+  .matrix-grid{grid-template-columns:repeat(2,1fr);}
+  .team-grid{grid-template-columns:repeat(2,1fr);}
+  .community-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .stat-band{grid-template-columns:repeat(2,1fr);gap:32px;}
+  .stat-cell:nth-child(2)::after{display:none;}
+}
+@media(max-width:720px){
+  .nav-links{display:none;}
+  .nav-links.open{
+    display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;
+    background:var(--root-panel);border-bottom:1px solid var(--root-line);
+    padding:16px 28px;gap:4px;
+  }
+  .nav-cta{display:none;}
+  .menu-toggle{display:flex;}
+  main{padding:0 20px;}
+  .nav-wrap{padding:14px 20px;}
+  section{padding:64px 0;}
+  .hero{padding-top:112px;}
+  .hero h1{font-size:clamp(38px,10vw,52px);}
+  .hero-stats{gap:24px;}
+  .matrix-grid{grid-template-columns:1fr;}
+  .show-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;}
+  .stat-band{grid-template-columns:1fr;padding:32px 22px;}
+  .stat-cell:not(:last-child)::after{
+    display:block;left:20%;right:20%;top:auto;bottom:-16px;width:auto;height:1px;
+  }
+  .stat-cell:nth-child(2)::after{display:block;}
+  .footer-top{grid-template-columns:1fr;gap:30px;}
+  .tl-item{padding-left:58px;}
+  .timeline::before{left:19px;}
+  .tl-dot{left:5px;width:28px;height:28px;font-size:10px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#top">
+      <div class="brand-mark">九</div>
+      <div class="brand-name">九一拔罗卜<small>JIURAN VIDEO</small></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#matrix">内容矩阵</a>
+      <a href="#works">精选作品</a>
+      <a href="#growth">成长轨迹</a>
+      <a href="#team">创作团队</a>
+      <a href="#community">社区互动</a>
+    </nav>
+    <a class="nav-cta" href="#subscribe">订阅频道</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">原创视频厂牌 · 持续生长中</div>
+      <h1>九一拔<span class="hl">罗卜</span></h1>
+      <p class="hero-lead">
+        我们相信每一个真实的故事都值得被记录。<strong>九一拔罗卜</strong> 是一支专注纪实影像与生活方式内容的创作团队，
+        从田间地头到城市街角，用镜头拔开表象，看见生长的力量。
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#works">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          观看精选作品
+        </a>
+        <a class="btn-ghost" href="#matrix">了解内容矩阵</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>320<em>+</em></b><span>原创视频作品</span></div>
+        <div class="hero-stat"><b>86<em>万</em></b><span>全平台订阅者</span></div>
+        <div class="hero-stat"><b>4.2<em>亿</em></b><span>累计播放量</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="player-card">
+        <div class="player-visual">
+          <div class="player-grid"></div>
+          <div class="player-orb orb-a"></div>
+          <div class="player-orb orb-b"></div>
+          <div class="player-orb orb-c"></div>
+          <div class="player-frame">
+            <button class="play-btn" aria-label="播放">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <div class="player-badge"><span class="dot"></span>正在首播</div>
+          <div class="player-meta">
+            <div>
+              <h3>拔萝卜的人 · 第一季 预告</h3>
+              <p>纪实系列 / 4K 制作</p>
+            </div>
+            <div class="player-time">02:14 / 05:40</div>
+          </div>
+          <div class="progress-line"><div class="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 滚动文字带 -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>纪实影像</span><span>生活方式</span><span>人物访谈</span><span>幕后花絮</span>
+      <span>社区共创</span><span>田野调查</span><span>城市漫游</span><span>手工技艺</span>
+      <span>纪实影像</span><span>生活方式</span><span>人物访谈</span><span>幕后花絮</span>
+      <span>社区共创</span><span>田野调查</span><span>城市漫游</span><span>手工技艺</span>
+    </div>
+  </div>
+
+  <!-- 内容矩阵 -->
+  <section id="matrix">
+    <div class="sec-head">
+      <div class="sec-tag">CONTENT MATRIX</div>
+      <h2>四条内容线，拔开生活的不同切面</h2>
+      <p>九一拔罗卜的内容不追热点、不堆噱头，我们以稳定的更新节奏和真实的现场感，构建可持续观看的原创内容矩阵。</p>
+    </div>
+    <div class="matrix-grid">
+      <article class="matrix-card">
+        <div class="matrix-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>拔萝卜纪实</h3>
+        <p>走进真实的劳作现场，记录从土地到餐桌的完整链条。每一集聚焦一个普通人的日常，不设剧本，只保留现场声音。</p>
+        <div class="tag-row"><span class="chip">4K 纪实</span><span class="chip">长片</span></div>
+      </article>
+      <article class="matrix-card">
+        <div class="matrix-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg>
+        </div>
+        <h3>生长实验室</h3>
+        <p>把镜头交给年轻的创作者，以短片实验的方式探索影像边界。每期一个主题，鼓励试错与个人表达，让新想法有地方发芽。</p>
+        <div class="tag-row"><span class="chip">短片实验</span><span class="chip">共创</span></div>
+      </article>
+      <article class="matrix-card">
+        <div class="matrix-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
+        </div>
+        <h3>面对面</h3>
+        <p>坐下来，慢慢聊。我们邀请手艺人、农人、设计师与普通劳动者，聊他们的选择与坚持，呈现被时代快进键略过的细节。</p>
+        <div class="tag-row"><span class="chip">访谈</span><span class="chip">深聊</span></div>
+      </article>
+      <article class="matrix-card">
+        <div class="matrix-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18l5-6 4 4 7-9"/><circle cx="20" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>罗卜日记</h3>
+        <p>团队幕后、设备碎碎念、拍摄踩坑记录。以 vlog 形式分享创作过程的真实状态，也会把观众的投稿剪进片尾。</p>
+        <div class="tag-row"><span class="chip">Vlog</span><span class="chip">幕后</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 精选作品 -->
+  <section id="works">
+    <div class="sec-head">
+      <div class="sec-tag">SELECTED WORKS</div>
+      <h2>近期精选，从镜头里看人间</h2>
+      <p>以下为九一拔罗卜本季度上线的主要作品，覆盖纪录长片、实验短片、人物访谈与幕后日常四种类型。</p>
+    </div>
+    <div class="show-grid">
+      <article class="show-card">
+        <div class="show-thumb tn-1">
+          <div class="tn-bg"></div>
+          <div class="ep">EP.01</div>
+          <div class="dur">18:42</div>
+          <div class="play-mini"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="show-body">
+          <h3>拔萝卜的人 · 春耕</h3>
+          <p>跟着老周在天亮前下地，记录一颗萝卜从播种到收成的三十天。声音全部来自现场，没有配乐，只有泥土和风。</p>
+          <div class="show-foot">
+            <div class="views">
+              <svg viewBox="0 0 24 24"><path d="M12 5c-5 0-9 4.5-10 7 1 2.5 5 7 10 7s9-4.5 10-7c-1-2.5-5-7-10-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+              128.6 万次播放
+            </div>
+            <div>2024 · 纪实</div>
+          </div>
+        </div>
+      </article>
+      <article class="show-card">
+        <div class="show-thumb tn-2">
+          <div class="tn-bg"></div>
+          <div class="ep">EP.07</div>
+          <div class="dur">12:05</div>
+          <div class="play-mini"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="show-body">
+          <h3>生长实验室 · 玻璃之后</h3>
+          <p>一位年轻导演用一块磨砂玻璃分割城市，拍摄窗内窗外两类人的一天。实验短片，全片自然光，手持拍摄。</p>
+          <div class="show-foot">
+            <div class="views">
+              <svg viewBox="0 0 24 24"><path d="M12 5c-5 0-9 4.5-10 7 1 2.5 5 7 10 7s9-4.5 10-7c-1-2.5-5-7-10-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+              76.2 万次播放
+            </div>
+            <div>2024 · 实验</div>
+          </div>
+        </div>
+      </article>
+      <article class="show-card">
+        <div class="show-thumb tn-3">
+          <div class="tn-bg"></div>
+          <div class="ep">EP.12</div>
+          <div class="dur">25:31</div>
+          <div class="play-mini"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="show-body">
+          <h3>面对面 · 竹编老李</h3>
+          <p>五十年竹编手艺人老李，聊他为什么在订单变少之后反而更慢下来。镜头停留在他手上，一道一道地过竹丝。</p>
+          <div class="show-foot">
+            <div class="views">
+              <svg viewBox="0 0 24 24"><path d="M12 5c-5 0-9 4.5-10 7 1 2.5 5 7 10 7s9-4.5 10-7c-1-2.5-5-7-10-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+              94.8 万次播放
+            </div>
+            <div>2024 · 访谈</div>
+          </div>
+        </div>
+      </article>
+      <article class="show-card">
+        <div class="show-thumb tn-4">
+          <div class="tn-bg"></div>
+          <div class="ep">VLOG</div>
+          <div class="dur">09:58</div>
+          <div class="play-mini"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="show-body">
+          <h3>罗卜日记 · 我们在雨里拍了三天</h3>
+          <p>外景遇上连续降雨，设备差点进水，团队一边骂天气一边把片子拍完。真实的创作现场，有狼狈也有笑。</p>
+          <div class="show-foot">
+            <div class="views">
+              <svg viewBox="0 0 24 24"><path d="M12 5c-5 0-9 4.5-10 7 1 2.5 5 7 10 7s9-4.5 10-7c-1-2.5-5-7-10-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+              53.4 万次播放
+            </div>
+            <div>2024 · 幕后</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 数据面板 -->
+  <section style="padding-top:0;">
+    <div class="stat-band">
+      <div class="stat-cell"><b>320+</b><span>原创作品上线</span></div>
+      <div class="stat-cell"><b>860K</b><span>全平台订阅者</span></div>
+      <div class="stat-cell"><b>4.2亿</b><span>累计播放量</span></div>
+      <div class="stat-cell"><b>138</b><span>合作创作者</span></div>
+    </div>
+  </section>
+
+  <!-- 成长轨迹 -->
+  <section id="growth">
+    <div class="sec-head">
+      <div class="sec-tag">OUR JOURNEY</div>
+      <h2>从一台小相机，到今天的内容社区</h2>
+      <p>九一拔罗卜不是一夜之间长出来的。我们把每一次更新、每一次线下放映、每一次创作者见面都记在这里。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">01</div>
+        <h3>起点：一台二手相机 <span class="yr">2019</span></h3>
+        <p>团队三个人、一台二手微单，在城郊拍下了第一条纪实短片《拔萝卜的人》。没有预算，靠朋友借来的灯和收音设备完成了最初的六集，意外获得了第一批忠实观众。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">02</div>
+        <h3>内容矩阵成型 <span class="yr">2020</span></h3>
+        <p>从单一纪实线扩展为纪实、实验、访谈、幕后四条内容线，确立「真实优先」的创作原则。同年上线自有频道，更新节奏固定为每周两更，全年无休。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">03</div>
+        <h3>第一次线下放映 <span class="yr">2021</span></h3>
+        <p>在一间旧仓库改的放映厅里，我们和一百二十位观众一起看完了《面对面》第一季。观众提问环节持续了两个小时，那晚确定了一件事：内容需要面对面的现场。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">04</div>
+        <h3>创作者共创计划 <span class="yr">2022</span></h3>
+        <p>开放投稿与共创通道，138 位创作者加入「生长实验室」。我们不设门槛，只看表达是否真诚。至今已有四十余部共创短片在频道上线。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">05</div>
+        <h3>4K 全流程升级 <span class="yr">2023</span></h3>
+        <p>完成从拍摄到调色的 4K 全流程升级，建立标准化素材库与声音档案。同时启动田野调查长期项目，把镜头更深地放进真实的生产现场。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">06</div>
+        <h3>继续拔开生活 <span class="yr">2024</span></h3>
+        <p>新的系列已经在路上。我们仍然相信慢一点、真一点的内容值得被看见。这个页面会继续更新，就像我们的频道一样。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作团队 -->
+  <section id="team">
+    <div class="sec-head">
+      <div class="sec-tag">THE CREW</div>
+      <h2>一群较真的影像工作者</h2>
+      <p>九一拔罗卜的核心团队不到十人，覆盖导演、摄影、剪辑、声音与运营。分工清晰，但每个人都下过现场、扛过机器。</p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="avatar av-1">周</div>
+        <h3>周牧</h3>
+        <div class="role">主理人 / 导演</div>
+        <p>纪实线负责人，习惯在开拍前先和拍摄对象一起干一天活。相信摄像机不该打断生活。</p>
+      </article>
+      <article class="team-card">
+        <div class="avatar av-2">林</div>
+        <h3>林晚</h3>
+        <div class="role">摄影指导</div>
+        <p>自然光派，擅长手持与长镜头。负责《面对面》系列的全部影像语言与色彩基调。</p>
+      </article>
+      <article class="team-card">
+        <div class="avatar av-3">陈</div>
+        <h3>陈叙</h3>
+        <div class="role">剪辑师</div>
+        <p>节奏把控者，坚持所有纪实内容的现场声优先。负责实验线的结构搭建与成片拉片。</p>
+      </article>
+      <article class="team-card">
+        <div class="avatar av-4">苏</div>
+        <h3>苏岸</h3>
+        <div class="role">声音设计 / 运营</div>
+        <p>负责现场收音与后期声音设计，同时维护创作者共创计划与社区互动，是团队的黏合剂。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 社区互动 + 订阅 -->
+  <section id="community">
+    <div class="sec-head">
+      <div class="sec-tag">COMMUNITY</div>
+      <h2>观众不是旁观者，是内容的一部分</h2>
+      <p>每一期片尾我们都会读观众的留言，也会把投稿剪进正片。这里是九一拔罗卜社区的公开留言板。</p>
+    </div>
+    <div class="community-grid">
+      <div class="msg-board">
+        <h3>社区留言板 <span class="live">实时</span></h3>
+        <div id="msgList">
+          <div class="msg-item">
+            <div class="msg-av" style="background:linear-gradient(135deg,#5fd6a6,#3aa8c9);">稻</div>
+            <div class="msg-body">
+              <b>稻香里的小满 <span>2 分钟前</span></b>
+              <p>《拔萝卜的人》春耕那集看了三遍，结尾老周蹲在地头抽烟的镜头，一句话没有，但我看哭了。</p>
+            </div>
+          </div>
+          <div class="msg-item">
+            <div class="msg-av" style="background:linear-gradient(135deg,#ff9b3d,#ff5c5c);">拍</div>
+            <div class="msg-body">
+              <b>拍片的老吴 <span>18 分钟前</span></b>
+              <p>想问下《玻璃之后》用的什么镜头？手持感太自然了，想学一下这种做法。</p>
+            </div>
+          </div>
+          <div class="msg-item">
+            <div class="msg-av" style="background:linear-gradient(135deg,#6b7cff,#a86bff);">北</div>
+            <div class="msg-body">
+              <b>北方有竹 <span>1 小时前</span></b>
+              <p>竹编老李那期太扎实了，没有煽情，只是让人看他手上的动作。这才是访谈该有的样子。</p>
+            </div>
+          </div>
+          <div class="msg-item">
+            <div class="msg-av" style="background:linear-gradient(135deg,#ffd35c,#ff9b3d);">绿</div>
+            <div class="msg-body">
+              <b>绿色的风 <span>3 小时前</span></b>
+              <p>投稿了一段自己拍的菜市场清晨，不知道能不能进罗卜日记，设备很普通，但光线特别好。</p>
+            </div>
+          </div>
+        </div>
+        <form class="msg-form" id="msgForm">
+          <input type="text" id="msgName" placeholder="你的昵称" maxlength="20">
+          <textarea id="msgText" placeholder="说点什么，或聊聊你看过的片子……" maxlength="200"></textarea>
+          <button type="submit">发布留言</button>
+        </form>
+      </div>
+
+      <div class="subscribe-card" id="subscribe">
+        <h3>订阅九一拔罗卜频道</h3>
+        <p>每周两更，纪实、实验、访谈和幕后轮番上线。留下邮箱，我们会把每周片单和新片上线提醒送到你手上。</p>
+        <form class="sub-input-row" id="subForm">
+          <input type="email" id="subEmail" placeholder="你的邮箱地址" required>
+          <button type="submit">立即订阅</button>
+        </form>
+        <div class="sub-msg" id="subMsg"></div>
+        <div class="sub-note">我们只发送内容更新与线下放映通知，不会打扰你，也不会把邮箱交给第三方。</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <div class="brand-mark">九</div>
+          <div class="brand-name">九一拔罗卜<small>JIURAN VIDEO</small></div>
+        </a>
+        <p>一家专注纪实影像与生活方式内容的原创视频厂牌，用镜头拔开表象，记录每一种生长的力量。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容频道</h4>
+        <a href="#matrix">拔萝卜纪实</a>
+        <a href="#matrix">生长实验室</a>
+        <a href="#matrix">面对面</a>
+        <a href="#matrix">罗卜日记</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于我们</h4>
+        <a href="#growth">成长轨迹</a>
+        <a href="#team">创作团队</a>
+        <a href="#community">社区互动</a>
+        <a href="#works">精选作品</a>
+      </div>
+      <div class="footer-col">
+        <h4>合作与投稿</h4>
+        <a href="#subscribe">订阅频道</a>
+        <a href="#community">内容投稿</a>
+        <a href="#community">品牌合作</a>
+        <a href="#community">线下放映</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2024 九一拔罗卜 · 保留所有权利 · 用真实记录真实</div>
+      <div class="socials">
+        <a href="#top" aria-label="微博"><svg viewBox="0 0 24 24"><path d="M10 8c-3 0-6 2-6 4.5S6 17 9 17s6-2 6-4.5S13 8 10 8zm0 7c-1.7 0-3-1-3-2.2s1.3-2.2 3-2.2 3 1 3 2.2S11.7 15 10 15zm8-9.5c1.5.5 2.5 2 2.5 4H19c0-1.3-.6-2.3-1.5-2.7.4-.4.6-.8.5-1.3z"/></svg></a>
+        <a href="#top" aria-label="B站"><svg viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm3-3l2 3h6l2-3 1.5 1-1.5 2H5.5L4 4l1.5-1zM8 10v4l5-2-5-2z"/></svg></a>
+        <a href="#top" aria-label="音乐"><svg viewBox="0 0 24 24"><path d="M12 3v10.5A3.5 3.5 0 1015.5 17V7h4V3h-7.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 移动端菜单
+  var toggle = document.getElementById('menuToggle');
+  var navLinks = document.getElementById('navLinks');
+  if(toggle && navLinks){
+    toggle.addEventListener('click', function(){
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ navLinks.classList.remove('open'); });
+    });
+  }
+
+  // 头图播放按钮的轻微反馈
+  var playBtn = document.querySelector('.play-btn');
+  if(playBtn){
+    playBtn.addEventListener('click', function(){
+      var card = document.querySelector('.player-card');
+      var fill = document.querySelector('.progress-fill');
+      card.style.transition = 'transform .3s ease';
+      card.style.transform = 'scale(.985)';
+      setTimeout(function(){ card.style.transform = 'scale(1)'; }, 180);
+      if(fill){ fill.style.transition = 'width 1.2s ease'; fill.style.width = '100%'; }
+    });
+  }
+
+  // 留言板
+  var msgForm = document.getElementById('msgForm');
+  var msgList = document.getElementById('msgList');
+  var msgName = document.getElementById('msgName');
+  var msgText = document.getElementById('msgText');
+  var colors = [
+    'linear-gradient(135deg,#ff9b3d,#ff5c5c)',
+    'linear-gradient(135deg,#5fd6a6,#3aa8c9)',
+    'linear-gradient(135deg,#6b7cff,#a86bff)',
+    'linear-gradient(135deg,#ffd35c,#ff9b3d)'
+  ];
+  if(msgForm){
+    msgForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = (msgName.value || '').trim();
+      var text = (msgText.value || '').trim();
+      if(!text){
+        msgText.focus();
+        return;
+      }
+      if(!name){ name = '热心观众'; }
+      var item = document.createElement('div');
+      item.className = 'msg-item';
+      var av = document.createElement('div');
+      av.className = 'msg-av';
+      av.style.background = colors[Math.floor(Math.random()*colors.length)];
+      av.textContent = name.charAt(0);
+      var body = document.createElement('div');
+      body.className = 'msg-body';
+      var b = document.createElement('b');
+      b.textContent = name + ' ';
+      var span = document.createElement('span');
+      span.textContent = '刚刚';
+      b.appendChild(span);
+      var p = document.createElement('p');
+      p.textContent = text;
+      body.appendChild(b);
+      body.appendChild(p);
+      item.appendChild(av);
+      item.appendChild(body);
+      msgList.insertBefore(item, msgList.firstChild);
+      msgText.value = '';
+      msgForm.querySelector('button').textContent = '发布成功';
+      setTimeout(function(){ msgForm.querySelector('button').textContent = '发布留言'; }, 1600);
+    });
+  }
+
+  // 订阅表单
+  var subForm = document.getElementById('subForm');
+  var subEmail = document.getElementById('subEmail');
+  var subMsg = document.getElementById('subMsg');
+  if(subForm){
+    subForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = (subEmail.value || '').trim();
+      if(v.indexOf('@') === -1 || v.length < 5){
+        subMsg.style.color = '#ff5c5c';
+        subMsg.textContent = '请输入有效的邮箱地址';
+        return;
+      }
+      subMsg.style.color = '#5fd6a6';
+      subMsg.textContent = '订阅成功，下一期片单将发送至 ' + v;
+      subEmail.value = '';
+    });
+  }
+
+  // 滚动进入动画
+  var revealEls = document.querySelectorAll('.matrix-card, .show-card, .team-card, .tl-item, .stat-cell');
+  if('IntersectionObserver' in window){
+    revealEls.forEach(function(el){
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .6s ease, transform .6s ease';
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
